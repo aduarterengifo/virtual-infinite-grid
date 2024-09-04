@@ -13,3 +13,10 @@ Mirrors andres-solid project inside ts-mono plus some teaks so it compiles.
 - bun dev 
 - goto: localhost:3003/m-n-k
 
+# uses:
+
+solid  and 
+solid-router,
+tailwind for styling. 
+
+hopefully this is sufficiently not a framework. 
