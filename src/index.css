@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    color-scheme: dark light;
+    supported-color-schemes: dark light;
+
+    --gray-100: oklch(100% 0 0);
+    --gray-90: oklch(90% 0 0);
+    --gray-80: oklch(80% 0 0);
+    --gray-70: oklch(70% 0 0);
+    --gray-60: oklch(60% 0 0);
+    --gray-50: oklch(50% 0 0);
+    --gray-40: oklch(40% 0 0);
+    --gray-30: oklch(30% 0 0);
+    --gray-20: oklch(20% 0 0);
+    --gray-10: oklch(10% 0 0);
+    --gray-00: oklch(0% 0 0);
+
+    --background: var(--gray-90);
+    --foreground: vary(--gray-20);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: var(--gray-30);
+        --foreground: var(--gray-90);
+    }
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+@layer base {
+    html {
+        touch-action: pan-x pan-y;
+    }
+}
+
+@layer utilities {
+    .no-zoom {
+        touch-action: pan-x pan-y;
+    }
+}

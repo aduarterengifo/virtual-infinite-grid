@@ -1,0 +1,90 @@
+.content {
+    --gap: clamp(1rem, 6vw, 3rem);
+    --full: minmax(var(--gap), 1fr);
+    --content: min(50ch, 100% - var(--gap) * 2);
+    --popout: minmax(0, 2rem);
+    --feature: minmax(0, 5rem);
+
+    display: grid;
+    grid-template-columns:
+        [full-start] var(--full)
+        [feature-start] var(--feature)
+        [popout-start] var(--popout)
+        [content-start] var(--content) [content-end]
+        var(--popout) [popout-end]
+        var(--feature) [feature-end]
+        var(--full) [full-end];
+}
+
+.content > * {
+    grid-column: content;
+}
+
+.ui {
+    display: grid;
+    grid-template-rows: 8rem 1fr;
+    grid-template-columns: 1fr;
+    width: min(30rem, calc(100% - 1rem));
+    gap: 1rem;
+}
+
+.strikethrough {
+    position: absolute;
+    background-color: red;
+    height: 4%;
+    width: 90%;
+}
+
+.flex {
+    display: flex;
+}
+
+.mainGrid {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+}
+
+.grid {
+    display: grid;
+    width: 100%;
+    border: black;
+    gap: 2%;
+    background-color: var(--foreground);
+    position: relative;
+}
+
+.gridSpace {
+    container-type: inline-size;
+    background-color: var(--background);
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+}
+
+.gridSpace > * {
+    /* height: 70%;
+    aspect-ratio: 1 / 1;
+    font-weight: 600; */
+    font-variant-numeric: tabular-nums;
+    /* font-size: calc(var(--container-size) * 20); */
+    line-height: 1;
+    text-align: center;
+    font-size: 75cqi;
+}
+
+.hLine {
+    height: 0.25rem;
+    width: 100%;
+    background-color: black;
+    grid-column: 1 / -1;
+}
+
+.vLine {
+    height: 0.25rem;
+    width: 100%;
+    background-color: black;
+    grid-row: 1 / -1;
+}
