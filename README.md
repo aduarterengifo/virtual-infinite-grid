@@ -1,6 +1,9 @@
 Andres-solid-mirror. 
 
+straight-up-does-not-work-on-mobile
+
 hosted @: [m-n-k game](https://solid.andres.duarterengifo.com/m-n-k)
+
 
 Mirrors andres-solid project inside ts-mono plus some teaks so it compiles.
 
@@ -23,3 +26,5 @@ solid-router,
 tailwind for styling. 
 
 hopefully this is sufficiently not a framework. 
+first time using solid — i'm a fan.
+I really should read over [signals-proposals](https://github.com/tc39/proposal-signals).
